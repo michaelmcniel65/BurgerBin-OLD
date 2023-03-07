@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: rgb(36,0,0);
+    background: linear-gradient(180deg, rgba(36,0,0,1) 0%, rgba(121,11,9,1) 35%, rgba(255,222,0,1) 100%);
+    background-attachment: fixed;
+}
+
+.welcome-user {
+    font-family: 'Golos Text', sans-serif;
+    word-break: break-all;
+}
