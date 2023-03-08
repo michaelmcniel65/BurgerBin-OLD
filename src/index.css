@@ -14,3 +14,7 @@ body {
     font-family: 'Golos Text', sans-serif;
     word-break: break-all;
 }
+
+@media (max-width: 1000px) {
+    .profileBarLarge {display: none;}
+}
