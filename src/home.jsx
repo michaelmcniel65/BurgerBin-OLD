@@ -24,13 +24,21 @@ function ProfileSideBar() {
   )
 }
 
+function contentScroll() {
+  return (
+    <>
+
+    </>
+  )
+}
+
 export default function Home() {
   
   return (
     <>
     <div className='flex justify-between border'>
       <div className='flex flex-col justify-between bg-white border min-h-screen w-[400px]'>
-        <ProfileSideBar/>
+        <ProfileSideBar className='fixed'/>
       </div>
       <div className='border max-h-[110px] p-7'>
         <img src="./burgerbinassets/burgerbinlogo.png"/>
