@@ -1,21 +1,41 @@
-import * as firebase from 'firebase/app';
-import 'firebase/storage';
-import 'firebase/firestore'
+import { initializeApp } from 'firebase/app';
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword } from 'firebase/auth';
+import { useEffect, useState } from 'react';
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_apiKey,
-    authDomain: process.env.REACT_APP_authDomain,
-    projectId: process.env.REACT_APP_projectId,
-    storageBucket: process.env.REACT_APP_storageBucket,
-    messagingSenderId: process.env.REACT_APP_messagingSenderId,
-    appId: process.env.REACT_APP_appId,
-    measurementId: process.env.REACT_APP_measurementId
+    apiKey: "AIzaSyAVflTBFjbGqlcQD_xS_UmItR7oNaCuyko",
+    authDomain: "burgerbin-82699.firebaseapp.com",
+    projectId: "burgerbin-82699",
+    storageBucket: "burgerbin-82699.appspot.com",
+    messagingSenderId: "62434977141",
+    appId: "1:62434977141:web:8fef094b5d377a6a509f3c",
+    measurementId: "G-4KXE4TF7Z6"
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
 
-const appStorage = firebase.storage();
-const appFirestore = firebase.firestore();
+export function signUp(email, password) {
+    return createUserWithEmailAndPassword(auth, email, password);
+}
 
-export { appStorage, appFirestore };
+export function login(email, password) {
+    return signInWithEmailAndPassword(auth, email, password);
+}
+
+export function logout() {
+    return signOut(auth);
+}
+
+export function useAuth() {
+    const [currentUser, setCurrentUser ] = useState();
+
+    useEffect(() => {
+        const unsub = onAuthStateChanged(auth, user => setCurrentUser(user))
+        return unsub;
+    }, [])
+
+    return currentUser;
+}
+
