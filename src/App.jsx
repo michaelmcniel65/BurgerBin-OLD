@@ -20,7 +20,7 @@ function App() {
     )
 
     return (
-      <div className='App'>
+      <div>
         <RouterProvider router={router}/>
       </div>
     )
@@ -30,17 +30,16 @@ const Root = () => {
     return (
         <>
         {/*White background and logo*/}
-        <div className='white-background flex flex-col justify-between bg-white h-screen lg:h-[20rem] w-96 lg:w-[4rem] lg:rounded-br-lg'>
-          <div className='first-section flex flex-col items-center gap-10 lg:gap-2 lg:pt-3'>
+        <div className='white-background flex flex-row bg-white h-20'>
+          <div className='first-section flex flex-row'>
             <Link to='/'>
-            <img className='website-logo pt-5 lg:hidden' 
+            <img className='website-logo p-5' 
               src="./burgerbinassets/burgerbinlogo.png"/>
             </Link>
   
             {/*Welcome message and profile picture*/}
-            <h1 className='welcome-user text-3xl text-black pt-4 lg:hidden'>Welcome, Bartholomew!</h1>
             <Link to='/'>
-            <img className='profile-picture w-[20rem] lg:w-[3.5rem] h-[20rem] lg:h-[3.5rem] lg:p-1 rounded-full object-cover' src='./burgerbinassets/defaultprofileimage.jpg'/>
+            <img className='profile-picture w-[4rem] lg:w-[3.5rem] h-[4rem] lg:h-[3.5rem] lg:p-1 rounded-full object-cover' src='./burgerbinassets/defaultprofileimage.jpg'/>
             </Link>
   
             {/*Profile button*/}
@@ -73,15 +72,7 @@ const Root = () => {
             </button>
             </Link>
           </div>
-          <div className='second-section flex flex-col items-center p-5'>
-  
-            {/*Logout button*/}
-            <button className='logout-button bg-red-500 hover:bg-red-400 text-white font-bold 
-                py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded-3xl lg:hidden'>Logout
-            </button>
-            <button className='profile-button-small bg-red-500 hover:bg-red-400 w-[3rem] h-[3rem] rounded-full xl:hidden'>
-              <i className="fa fa-caret-square-o-down" aria-hidden="true"/></button>
-          </div>
+
         </div>
 
         <div>
@@ -92,3 +83,13 @@ const Root = () => {
 }
 
 export default App
+
+{/* <div className='second-section flex flex-col items-center p-5'>
+  
+{/*Logout button*/}
+{/* <button className='logout-button bg-red-500 hover:bg-red-400 text-white font-bold 
+    py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded-3xl lg:hidden'>Logout
+</button>
+<button className='profile-button-small bg-red-500 hover:bg-red-400 w-[3rem] h-[3rem] rounded-full xl:hidden'>
+  <i className="fa fa-caret-square-o-down" aria-hidden="true"/></button>
+</div> */}
