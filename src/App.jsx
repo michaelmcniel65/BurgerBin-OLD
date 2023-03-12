@@ -33,39 +33,47 @@ const Root = () => {
         <div className='white-background flex flex-row w-full bg-white h-20 justify-between'>
           <div className='first-section flex flex-row items-center'>
             <Link to='/'>
-            <img className='website-logo p-3 w-full h-auto' 
+            <img className='website-logo lg:hidden p-3 w-full h-auto' 
               src="./burgerbinassets/burgerbinlogo.png"/>
+            <img className='website-logo xl:hidden p-3 w-full h-auto' 
+              src="./burgerbinassets/burgerbinlogosmall.png"/>
             </Link>
           </div>
 
-          <div className='flex flex-row w-[40rem] justify-evenly items-center'>
+          <div className='flex flex-row w-[30rem] justify-evenly items-center'>
             {/*Profile button*/}
             
-            <Link to='/profile'>
-            <button className='profile-button w-[10rem] bg-blue-500 hover:bg-blue-400 text-white font-bold 
-              py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-3xl lg:hidden'>Profile
+            <Link to='/'>
+            <button className='home-button text-gray-900 bg-white border border-gray-300 
+            hover:bg-gray-100 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 
+            dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 
+            dark:focus:ring-gray-700 lg:hidden'>Home
             </button>
-            <button className='profile-button-small bg-blue-500 hover:bg-blue-400 w-[4rem] h-[3rem] rounded-full xl:hidden'>
+            <button className='home-button-small bg-gray-500 hover:bg-gray-400 w-[4rem] h-[3rem] rounded-full xl:hidden'>
               <i className="fa fa-address-card" aria-hidden="true"/>
             </button>
             </Link>
   
             {/*Friends button*/}
             <Link to='/friends'>
-            <button className='friends-button w-[10rem] bg-yellow-500 hover:bg-yellow-400 text-white font-bold 
-              py-2 px-4 border-b-4 border-yellow-700 hover:border-yellow-500 rounded-3xl lg:hidden'>Friends
+            <button className='friends-button text-gray-900 bg-white border border-gray-300 
+            hover:bg-gray-100 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 
+            dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 
+            dark:focus:ring-gray-700 lg:hidden'>Friends
             </button>
-            <button className='profile-button-small bg-yellow-500 hover:bg-yellow-400 w-[4rem] h-[3rem] rounded-full xl:hidden'>
+            <button className='profile-button-small bg-gray-500 hover:bg-gray-400 w-[4rem] h-[3rem] rounded-full xl:hidden'>
               <i className="fa fa-users" aria-hidden="true"/>
             </button>
             </Link>
   
             {/*Games button*/}
             <Link to='/games'>
-            <button className='games-button w-[10rem] bg-green-500 hover:bg-green-400 text-white font-bold 
-              py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded-3xl lg:hidden'>Games
+            <button className='games-button text-gray-900 bg-white border border-gray-300 
+            hover:bg-gray-100 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 
+            dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 
+            dark:focus:ring-gray-700 lg:hidden'>Games
             </button>
-            <button className='profile-button-small bg-green-500 hover:bg-green-400 w-[4rem] h-[3rem] rounded-full xl:hidden'>
+            <button className='profile-button-small bg-gray-500 hover:bg-gray-400 w-[4rem] h-[3rem] rounded-full xl:hidden'>
               <i className="fa fa-gamepad" aria-hidden="true"/>
             </button>
             </Link>
@@ -73,13 +81,15 @@ const Root = () => {
 
           <div className='flex flex-row w-[15rem] justify-evenly items-center'>
             {/*Logout button*/}
-            <button className='logout-button bg-red-500 hover:bg-red-400 text-white font-bold 
-                py-2 px-4 w-[6rem] h-[3rem] border-b-4 border-red-700 hover:border-red-500 rounded-3xl lg:hidden'>Logout
+            <button className='logout-button text-red-900 bg-white border border-red-300 
+            hover:bg-red-100 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-800 
+            dark:text-white dark:border-red-600 dark:hover:bg-red-700 dark:hover:border-red-600 
+            dark:focus:ring-red-700 lg:hidden'>Logout
             </button>
             <button className='profile-button-small bg-red-500 hover:bg-red-400 w-[3rem] h-[3rem] rounded-full xl:hidden'>
               <i className="fa fa-caret-square-o-down" aria-hidden="true"/></button>
             {/*Welcome message and profile picture*/}
-            <Link to='/'>
+            <Link to='/profile'>
             <img className='profile-picture w-[4rem] lg:w-[3.5rem] h-[4rem] lg:h-[3.5rem] lg:p-1 rounded-full object-cover' src='./burgerbinassets/defaultprofileimage.jpg'/>
             </Link>
           </div>
