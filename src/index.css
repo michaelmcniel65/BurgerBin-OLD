@@ -14,3 +14,17 @@ body {
     font-family: 'Golos Text', sans-serif;
     word-break: break-all;
 }
+
+.email-input {
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.password-input {
+    border-width: 2px;
+    border-color: black;
+    border-radius: 10px;
+    padding: 2px;
+}
